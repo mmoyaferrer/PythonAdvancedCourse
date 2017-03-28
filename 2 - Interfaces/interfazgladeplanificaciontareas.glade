@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated with glade 3.18.3 -->
+<interface>
+  <requires lib="gtk+" version="3.12"/>
+  <object class="GtkAboutDialog" id="aboutdialog">
+    <property name="can_focus">False</property>
+    <property name="window_position">center</property>
+    <property name="type_hint">menu</property>
+    <property name="program_name">Planificación de tareas mediante base de datos SQL</property>
+    <property name="version">1.0</property>
+    <property name="copyright" translatable="yes">Manuel Moya Ferrer</property>
+    <property name="authors">Manuel Moya Ferrer</property>
+    <property name="artists">Manuel Moya Ferrer</property>
+    <property name="logo_icon_name">accessories-dictionary</property>
+    <property name="license_type">lgpl-3-0-only</property>
+    <child internal-child="vbox">
+      <object class="GtkBox" id="aboutdialog-">
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <property name="spacing">2</property>
+        <child internal-child="action_area">
+          <object class="GtkButtonBox" id="aboutdialog-action_area1">
+            <property name="can_focus">False</property>
+            <property name="layout_style">end</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">False</property>
+            <property name="pack_type">end</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <placeholder/>
+        </child>
+      </object>
+    </child>
+  </object>
+  <object class="GtkWindow" id="window1">
+    <property name="can_focus">False</property>
+    <signal name="destroy" handler="onDeleteWindow" swapped="no"/>
+    <child>
+      <object class="GtkBox" id="box1">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="orientation">vertical</property>
+        <child>
+          <object class="GtkMenuBar" id="menubar1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin_bottom">23</property>
+            <child>
+              <object class="GtkMenuItem" id="menuItemFile">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Edicion</property>
+                <property name="use_underline">True</property>
+                <child type="submenu">
+                  <object class="GtkMenu" id="menu1">
+                    <property name="visible">True</property>
+                    <property name="can_focus">False</property>
+                    <child>
+                      <object class="GtkMenuItem" id="subItemCrearTarea">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Crear Tarea</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="onCrearTarea" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="subItemObtenerTarea">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Obtener Tarea</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="onObtenerTarea" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="subItemActualizarTarea">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Actualizar Tarea</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="onActualizarTarea" swapped="no"/>
+                      </object>
+                    </child>
+                    <child>
+                      <object class="GtkMenuItem" id="subItemBorrarTarea">
+                        <property name="visible">True</property>
+                        <property name="can_focus">False</property>
+                        <property name="label" translatable="yes">Borrar Tarea</property>
+                        <property name="use_underline">True</property>
+                        <signal name="activate" handler="onBorrarTarea" swapped="no"/>
+                      </object>
+                    </child>
+                  </object>
+                </child>
+              </object>
+            </child>
+            <child>
+              <object class="GtkMenuItem" id="itemAcercaDe">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Acerca De</property>
+                <property name="use_underline">True</property>
+                <signal name="activate" handler="onAcercaDe" swapped="no"/>
+              </object>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">0</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkGrid" id="grid1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <child>
+              <object class="GtkLabel" id="label1">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="margin_bottom">28</property>
+                <property name="label" translatable="yes"> ID en el que se realizará la acción elegida </property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label2">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Tarea</property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label3">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Día</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label4">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Mes</property>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label5">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Año</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkLabel" id="label6">
+                <property name="visible">True</property>
+                <property name="can_focus">False</property>
+                <property name="label" translatable="yes">Prioridad</property>
+              </object>
+              <packing>
+                <property name="left_attach">4</property>
+                <property name="top_attach">1</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="entryID">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="margin_bottom">20</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">0</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="entryTarea">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">0</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="entryDia">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">1</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="entryMes">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">2</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="entryAnio">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">3</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <object class="GtkEntry" id="entryPrioridad">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+              </object>
+              <packing>
+                <property name="left_attach">4</property>
+                <property name="top_attach">2</property>
+              </packing>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+            <child>
+              <placeholder/>
+            </child>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">1</property>
+          </packing>
+        </child>
+        <child>
+          <object class="GtkStatusbar" id="statusbar1">
+            <property name="visible">True</property>
+            <property name="can_focus">False</property>
+            <property name="margin_left">10</property>
+            <property name="margin_right">10</property>
+            <property name="margin_start">10</property>
+            <property name="margin_end">10</property>
+            <property name="margin_top">6</property>
+            <property name="margin_bottom">6</property>
+            <property name="orientation">vertical</property>
+            <property name="spacing">2</property>
+          </object>
+          <packing>
+            <property name="expand">False</property>
+            <property name="fill">True</property>
+            <property name="position">2</property>
+          </packing>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

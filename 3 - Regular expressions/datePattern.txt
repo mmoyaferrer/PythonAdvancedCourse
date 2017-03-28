@@ -1,0 +1,7 @@
+## Manuel Moya Ferrer
+## Curso Python avanzado
+## Ejercicio Expresiones regulares - Identificar Fecha
+
+
+patron="[a-zA-Z]+\s?[a-zA-Z]+\s"+"\d\d?[/](Ene|Feb|Mar|Abr|May|Jun|Jul|Ago|Sep|Oct|Nov|Dic)/[2-9]\d{3}\s"+"\d\d?[:]\d\d?\s(AM|PM)"
+
