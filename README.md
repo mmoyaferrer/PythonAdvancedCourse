@@ -1,5 +1,12 @@
 # PythonAdvancedCourse
+
 SQL, graphical user interface, games, keylogger and some more exercises coded in python
+
+# Author
+
+Manuel Moya Ferrer
+
+# License
 
 This work is licensed under the Creative Commons
 Attribution-NonCommercial-ShareAlike CC BY-NC-SA License 
